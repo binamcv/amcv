@@ -1,9 +1,8 @@
 {
   "sites": [
-    // ===== 原生支持：一定能用 =====
     {
       "key": "csp_Bili",
-      "name": "🅱 B站动漫(原生支持)",
+      "name": "🅱 B站动漫",
       "type": 1,
       "api": "csp_Bili",
       "searchable": 1,
@@ -17,7 +16,6 @@
       "searchable": 1,
       "quickSearch": 1
     },
-    // ===== Xpath爬虫：天天动漫 =====
     {
       "key": "ttdm",
       "name": "🐉 天天动漫",
@@ -31,17 +29,19 @@
         "homeUrl": "https://www.tiantiandongman.com/",
         "cateUrlManual": {
           "全部": "https://www.tiantiandongman.com/",
-          "日本动漫": "https://www.tiantiandongman.com/vodtype/1.html",
-          "国产动漫": "https://www.tiantiandongman.com/vodtype/2.html"
+          "日漫": "https://www.tiantiandongman.com/h/1/",
+          "国漫": "https://www.tiantiandongman.com/h/2/",
+          "美漫": "https://www.tiantiandongman.com/h/3/",
+          "剧场版": "https://www.tiantiandongman.com/h/4/"
         },
-        "listNode": "//div[contains(@class,'list-poster')]",
+        "listNode": "//article[contains(@class,'u-movie')]",
         "listUrl": ".//a/@href",
+        "listUrlTo": "https://www.tiantiandongman.com{url}",
         "listTitle": ".//a/@title",
-        "listImg": ".//img/@data-src",
-        "listNote": ".//span[contains(@class,'text')]/text()"
+        "listImg": ".//img/@data-original",
+        "listNote": ".//div[contains(@class,'zhuangtai')]/span/text()"
       }
     },
-    // ===== Xpath爬虫：海星动漫 =====
     {
       "key": "hxdm",
       "name": "🌟 海星动漫",
@@ -68,15 +68,14 @@
   ],
   "lives": [
     {
-      "name": "IPTV聚合",
-      "type": 0,
+      "name": "IPTV直播",
+      "type": 2,
       "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
       "playerType": 2
     }
   ],
   "parses": [
     {"name": "七七云", "type": 0, "url": "https://jx.77flv.cc/?url="},
-    {"name": "咸鱼云", "type": 0, "url": "https://jx.xymp4.cc/?url="},
-    {"name": "M1907",  "type": 0, "url": "https://im1907.top/?jx="}
+    {"name": "咸鱼云", "type": 0, "url": "https://jx.xymp4.cc/?url="}
   ]
 }
