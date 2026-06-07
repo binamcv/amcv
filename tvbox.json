@@ -1,0 +1,82 @@
+{
+  "sites": [
+    // ===== 原生支持：一定能用 =====
+    {
+      "key": "csp_Bili",
+      "name": "🅱 B站动漫(原生支持)",
+      "type": 1,
+      "api": "csp_Bili",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
+      "key": "csp_Douban",
+      "name": "🎯 豆瓣热播",
+      "type": 1,
+      "api": "csp_Douban",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    // ===== Xpath爬虫：天天动漫 =====
+    {
+      "key": "ttdm",
+      "name": "🐉 天天动漫",
+      "type": 1,
+      "api": "csp_Xpath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "ua": "Mozilla/5.0",
+        "homeUrl": "https://www.tiantiandongman.com/",
+        "cateUrlManual": {
+          "全部": "https://www.tiantiandongman.com/",
+          "日本动漫": "https://www.tiantiandongman.com/vodtype/1.html",
+          "国产动漫": "https://www.tiantiandongman.com/vodtype/2.html"
+        },
+        "listNode": "//div[contains(@class,'list-poster')]",
+        "listUrl": ".//a/@href",
+        "listTitle": ".//a/@title",
+        "listImg": ".//img/@data-src",
+        "listNote": ".//span[contains(@class,'text')]/text()"
+      }
+    },
+    // ===== Xpath爬虫：海星动漫 =====
+    {
+      "key": "hxdm",
+      "name": "🌟 海星动漫",
+      "type": 1,
+      "api": "csp_Xpath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "ua": "Mozilla/5.0",
+        "homeUrl": "https://www.haixingdmx.com/",
+        "cateUrlManual": {
+          "全部": "https://www.haixingdmx.com/",
+          "日本动漫": "https://www.haixingdmx.com/vodtype/1.html",
+          "国产动漫": "https://www.haixingdmx.com/vodtype/2.html"
+        },
+        "listNode": "//div[contains(@class,'vlist')]//div[contains(@class,'item')]",
+        "listUrl": ".//a/@href",
+        "listTitle": ".//a/@title",
+        "listImg": ".//img/@src",
+        "listImgTo": "https:{url}"
+      }
+    }
+  ],
+  "lives": [
+    {
+      "name": "IPTV聚合",
+      "type": 0,
+      "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "playerType": 2
+    }
+  ],
+  "parses": [
+    {"name": "七七云", "type": 0, "url": "https://jx.77flv.cc/?url="},
+    {"name": "咸鱼云", "type": 0, "url": "https://jx.xymp4.cc/?url="},
+    {"name": "M1907",  "type": 0, "url": "https://im1907.top/?jx="}
+  ]
+}
