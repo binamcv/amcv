@@ -1,81 +1,62 @@
 {
   "sites": [
     {
-      "key": "csp_Bili",
-      "name": "🅱 B站动漫",
-      "type": 1,
-      "api": "csp_Bili",
-      "searchable": 1,
-      "quickSearch": 1
-    },
-    {
-      "key": "csp_Douban",
+      "key": "豆瓣",
       "name": "🎯 豆瓣热播",
-      "type": 1,
+      "type": 3,
       "api": "csp_Douban",
       "searchable": 1,
       "quickSearch": 1
     },
     {
-      "key": "ttdm",
-      "name": "🐉 天天动漫",
-      "type": 1,
-      "api": "csp_Xpath",
+      "key": "玩耦",
+      "name": "💯 玩耦4K",
+      "type": 3,
+      "api": "csp_Wogg",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
+      "changeable": 1,
       "ext": {
-        "ua": "Mozilla/5.0",
-        "homeUrl": "https://www.tiantiandongman.com/",
-        "cateUrlManual": {
-          "全部": "https://www.tiantiandongman.com/",
-          "日漫": "https://www.tiantiandongman.com/h/1/",
-          "国漫": "https://www.tiantiandongman.com/h/2/",
-          "美漫": "https://www.tiantiandongman.com/h/3/",
-          "剧场版": "https://www.tiantiandongman.com/h/4/"
-        },
-        "listNode": "//article[contains(@class,'u-movie')]",
-        "listUrl": ".//a/@href",
-        "listUrlTo": "https://www.tiantiandongman.com{url}",
-        "listTitle": ".//a/@title",
-        "listImg": ".//img/@data-original",
-        "listNote": ".//div[contains(@class,'zhuangtai')]/span/text()"
+        "site": ["http://www.wogg.live", "https://wogg.xxooo.cf"]
       }
     },
     {
-      "key": "hxdm",
-      "name": "🌟 海星动漫",
-      "type": 1,
-      "api": "csp_Xpath",
+      "key": "次元动漫",
+      "name": "🎀 次元动漫追番",
+      "type": 3,
+      "api": "csp_AppGet",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
       "ext": {
-        "ua": "Mozilla/5.0",
-        "homeUrl": "https://www.haixingdmx.com/",
-        "cateUrlManual": {
-          "全部": "https://www.haixingdmx.com/",
-          "日本动漫": "https://www.haixingdmx.com/vodtype/1.html",
-          "国产动漫": "https://www.haixingdmx.com/vodtype/2.html"
-        },
-        "listNode": "//div[contains(@class,'vlist')]//div[contains(@class,'item')]",
-        "listUrl": ".//a/@href",
-        "listTitle": ".//a/@title",
-        "listImg": ".//img/@src",
-        "listImgTo": "https:{url}"
+        "url": "https://www.cyfz.top",
+        "dataKey": "e72cdfd629e8895d",
+        "dataIv": "e72cdfd629e8895d"
+      }
+    },
+    {
+      "key": "厂长",
+      "name": "🏪 厂长蓝光",
+      "type": 3,
+      "api": "csp_Czsapp",
+      "searchable": 1,
+      "quickSearch": 1,
+      "ext": "https://cz01.vip"
+    },
+    {
+      "key": "漫国动漫",
+      "name": "⚗️ 漫国动漫",
+      "type": 3,
+      "api": "csp_AppSy",
+      "searchable": 1,
+      "quickSearch": 1,
+      "ext": {
+        "site": "https://dm-1255775577.cos.ap-guangzhou.myqcloud.com/dmg/api.txt",
+        "siteKey": "rectangleadsadxa",
+        "listKey": "aassddwwxxllsx1x",
+        "parsesKey": "aassddwwxxllsx1x"
       }
     }
   ],
-  "lives": [
-    {
-      "name": "IPTV直播",
-      "type": 2,
-      "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "playerType": 2
-    }
-  ],
-  "parses": [
-    {"name": "七七云", "type": 0, "url": "https://jx.77flv.cc/?url="},
-    {"name": "咸鱼云", "type": 0, "url": "https://jx.xymp4.cc/?url="}
-  ]
+  "lives": [],
+  "parses": []
 }
