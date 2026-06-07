@@ -1,0 +1,54 @@
+{
+  "sites": [
+    {
+      "key": "czspp",
+      "name": "厂长资源",
+      "type": 3,
+      "api": "csp_Czspp",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "豆瓣",
+      "name": "豆瓣电影",
+      "type": 3,
+      "api": "csp_DoubanProvider",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "哔哩",
+      "name": "哔哩动漫",
+      "type": 3,
+      "api": "csp_BiliBili",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "https://raw.githubusercontent.com/FongMi/CatVod/main/json/bili.json"
+    },
+    {
+      "key": "CCTV",
+      "name": "央视频道",
+      "type": 3,
+      "api": "csp_CCTV",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    }
+  ],
+  "lives": [
+    {
+      "group": "央视",
+      "channels": [
+        {
+          "name": "CCTV-1",
+          "urls": [
+            "http://39.135.138.60:18890/PLTV/88888910/224/3221225618/index.m3u8"
+          ]
+        }
+      ]
+    }
+  ]
+}
